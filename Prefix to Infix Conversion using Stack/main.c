@@ -52,7 +52,7 @@ char *convert(char expression[]) {
     stack->next = NULL;
     stack->data[0] = '\0';
 
-    for (int i = (int)strlen(expression); i >= 0; i--) {
+    for (int i = (int)strlen(expression) - 1; i >= 0; i--) {
         if (isOperator(expression[i])) {
             a = pop(&stack);
             b = pop(&stack);
